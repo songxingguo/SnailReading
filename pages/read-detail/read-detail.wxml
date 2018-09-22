@@ -1,0 +1,20 @@
+<!--pages/read-detail/read-detail.wxml-->
+<view class='read-detail'>
+  <view class='title'>{{readDetail.tit}}</view>
+  <view class='header'>
+    <view>
+      <image src='{{readDetail.aPhoto}}' mode="aspectFit"></image>
+      <text class='name'>{{readDetail.author}}</text>
+    </view>
+    <view class="follow {{isFollowed?'followed':''}}" bindtap='follow'>关注</view>
+    </view>
+  <view class='content'>
+    <image src='{{readDetail.bigImg}}'></image>
+    <text>{{readDetail.words}}</text>
+  </view>
+  <view class='footer'>
+    <icon class='iconfont icon-share'></icon>
+    <icon class="iconfont {{isCollected?'icon-collect':'icon-collected'}}" bindtap='like'></icon>
+    <icon class='iconfont icon-comment'></icon>
+  </view>
+</view>

@@ -1,0 +1,20 @@
+<!--pages/index/index.wxml-->
+<view class='read-cont' wx:for='{{listData}}' wx:key='{{index}}'
+  bindtap='readDetail' data-index='{{index}}'>
+  <view class='header'>
+    <image src='{{item.aPhoto}}'></image>
+    <text>{{item.author}}</text>
+  </view>
+  <view class='body'>
+    <image src='{{item.bigImg}}'></image>
+    <view class='title'>
+      <view class='hot'>热点</view>
+      <text>{{item.tit}}</text>
+    </view>
+    <text class='content'>{{item.intro}}</text>
+  </view>
+  <view class='footer'>
+    <text class='clickNum'>{{item.clickNum}} 点击 . 4 本书</text>
+    <view class='great'>{{item.great}}<icon class='iconfont icon-greate'></icon></view>
+  </view>
+</view>
